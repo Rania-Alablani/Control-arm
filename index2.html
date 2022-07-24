@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <title>لاقط صوتي</title>
+<style>
+body{
+  background: #6894a1;
+  margin: 0;
+  padding: 0;
+}
+button{
+  background-color: #7a162f ;
+  border-style: none;
+  border-radius: 5px;
+  padding: 20px 30px;
+  color: #ffffff;
+}
+#output{
+  font-size: 30px;
+}
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+  <div class="header">
+      <a class="logo" href="#"><img src="https://s-m.com.sa/ar/images/logo.png" alt="logo" /></a>
+</div>
+<audio id="voice">
+	<source id="sound" src="1.mp3" type="audio/mp3">
+</audio>
+
+<audio id="voice1">
+	<source id="sound" src="2.mp3" type="audio/mp3">
+</audio>
+
+<p id="demo"></p>
+
+<script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="script.js"></script>
+<script src="arduino.js"></script>
+</script>
+<div align="center">
+<br>
+
+	<button onclick="stt()">أبدأ</button>
+
+    <p><span id="act"></span></p>
+    <div id="output" class="hide" ></div>
+</div>
+</body>
+</html>
